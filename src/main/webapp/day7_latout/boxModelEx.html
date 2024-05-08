@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style>
+	/* border의 속성 중에 radius 라는 속성이 있습니다.
+		이건 각 모서리를 둥글게 만드는데 사용되는데, 거의 px로 값을 줍니다.
+		테스트 해 볼게요*/
+		
+		#round{
+			border-radius: 50%;	
+		}
+		#margin1{
+			margin: 50px;
+		}
+		#margin2{
+			margin: 30px 50px; 
+		}
+		#margin3{
+			margin: 30px 20px 50px;
+		}
+		#margin4{
+			margin: 30px 50px 30px 50px;
+		}
+		div{
+			width: 200px;
+			height: 100px;
+			display: inline-block;
+			border: 1px solid darkgoldenrod;	
+		}	
+		body{
+			background-color: khaki;	
+		}	
+		#container {
+			background-color: aliceblue;
+			width: 600px;
+			margin: 20px auto;
+			padding: 2px;		
+		}	
+		table, th, td{
+			border: 1px solid white;
+			border-collapse: collapse;		
+		}
+		th, td{
+			padding: 10px, 20px;
+		}
+		
+		
+		
+		
+</style>
+</head>
+<body>
+	
+		<img src="../images/jenny.png">
+		<img id="round" src="../images/jenny.png">
+
+	<!--<hr>
+		<div id="margin1"></div>
+		<div id="margin2"></div>
+		<div id="margin3"></div>
+		<div id="margin4"></div>
+		
+		-->
+	
+	<div id="container">	
+		<hr>
+		<h1>오늘은 7일차 강의입니다.</h1>	
+		<p>잘 따라오고 있는게 느껴집니다. 지금처럼만 하시면 될 거에요.</p>	
+		<ul>
+			<li>스크립트</li>
+			<li>자바</li>
+		</ul>
+	
+	
+		<h2>다음은 JavaScript를 할건데 그 전에 BootStrap이란걸 강의해 드릴게요</h2>
+	<table>
+		<tr>
+			<th>과목명</th>
+			<th>설명</th>
+		</tr>
+		<tr>
+			<th>JavaScript</th>
+			<th>웹의 동적 효과 및 클라이언트의 제어를 위한 프로그래밍</th>
+		</tr>
+		<tr>
+			<th>BootStrap</th>
+			<th>HTML, CSS, JavaScript, TQury Template Framework</th>
+		</tr>
+		<tr>
+			<th>Java</th>
+			<th>Applicatiom Programing Language</th>
+		</tr>
+		<tr>
+			<th>JSP</th>
+			<th>그냥 설명...</th>
+		</tr>
+	</table>
+	
+	</div>
+
+
+
+</body>
+</html>

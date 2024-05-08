@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!--기본 문법부터 ~ Selector의 종류 및 정의하는 방법을 알아봅니다
+	1. 선택자(Selector) (요소명 element) {정의부의 내용은 속성 : 갑[값n]; 속성 : 값[값n...]}
+	2. id selector : 문서 내의 tag에 적용된 id값을 기준으로 찾아서 적용하는 selector입니다.
+		css에선 #id {css 정의} 식으로 호출합니다. 주의할 점은 is selector은 한 문서에 한번만 적용 가능.
+		때문에, html에서 요소애 is를 부여할 때 같은 이름을 주지않도록 함.(중복되면 자바스크립트에서도 문제 발생)
+	3. class selector : .className{}으로 정의해서 적용할 태그 내에 class 속성값으로 같은 이름에 적용하는 문법
+		클래스 selector는 한번이상, 즉 중복되어도 상관없습니다.
+	4. 그룹 selector : ,
+	-->
+<link rel="stylesheet" href="../css/mycss1.css">	
+	
+<style>
+	body {
+			background-color: lightsteelblue;
+	}
+	
+	h1 {
+		color: fuchsia;
+		font-size: 20px;
+		text-align: center;
+		font-family: Tahoma;
+
+	}
+	p {
+		color: cornflowerblue;
+	
+	/* 서체(font-family)는 궁서체, 하늘그림체 서체에 적용되는 속성
+		이 값은 기본적으로 운영체제에서 가져옵니다. 즉, 운영체제에 없는 서체는 시스템 기본 서체가 적용됨*/
+		font-family: Verdana
+		font-size: 40px
+	} 
+	
+
+
+	#pSummer{
+		color: darkgreen;
+		background-color: burlywood;
+		text-align: right;	
+	}
+
+	p.center{
+		text-align: center;
+		color: navy;		
+	}
+	
+	p.large{
+			font-size: 300%; /* 상대값은 반드시 px값으로 기준 문자가 정해져 있어야 함.*/
+		
+	}
+	/* h2,p,h3 요소의 문자열 정렬은 우측으로 하면서, 색상은 green으로 하고싶다
+		그룹 선택자 : , 를 기준으로 selector 나열 후 정의하면 모두 적용됨 
+		
+		h2,p,h3~~ */
+	
+	
+	
+
+	body * {
+		color: blue;
+		background-color: mediumaquamarine;
+	}
+
+</style>
+
+</head>
+<body>
+	<!--css를 정의하는 방법3가지
+		inline > 문서 내 style > link 로 가져오기 
+		위 세개 중에 우선 순위는 inline이 제일 먼저 -->
+<h1>My First Css Exam</h1>
+<p>This is MM paragraph</p>
+<h1 style="color: darkslateblue;">이것도 h1입니다.</h1>
+
+<div>
+	<p>여기는 1월에 할 일입니다.<p>
+	<p id="pSummer">여기는 여름 휴가에 대한 내용입니다.</p>		
+</div>
+
+
+<div class="center">
+	<h1>여긴 다른 div의 h1 콘텐츠</h1>
+	<p class="center">여긴 다른 div의 p 콘텐츠</p>
+	<p class="center large">여긴 두개의 style 클래스가 적용된 p요소 입니다.</p>
+</div>
+
+	<!--과제
+		1. mycss.css파일 생성
+		2. 내부에는 div를 정의 하는데, 모든 div가 적용될 수 있도록 아래처럼 합니다.
+			모든 단위는 px
+			a. 너비는 200
+			b. 높이는 100
+			c. 마진은 5
+			d. 패딩은 5
+			e. 글씨크기는 16
+			f. 배경색은 원하는 걸로
+		3. display 라는 id에만 적용할 수 있는 div css도 정의 합니다.
+			a. 경계선만 정의하는데  2px 점선, blue 컬러로 정의 (한번에 선의 속성을 정의할 때는 반드시 이 순서로)
+		4. area 라는 클래의 스타일을 정의합니다.
+			a. 글꼴(weigt)의 크기값을 굵게(bold)로 정의
+		5. 위 처럼 정의된 스타일을 myStyle2.html에 적용합니다
+			a. 첫번째 div내에는 area 클래스가 적용된 내 이름은 ??? 입니다. 라는 구문으로 적용하세요
+			b. 두번째 구문에는 오늘 배운 내용은 css입니다. 라고 나오도록 하고 스타일은 적용하지 않습니다.
+			c.두번째 div를 생성하는데 display가 적용되도록
+			d. 내용으로는 위에서 처럼 area 클래스가 적용된 구문 태그로 css잼남 이라고 문자열 적으삼.
+				-->
+
+
+
+
+
+</body>
+</html>

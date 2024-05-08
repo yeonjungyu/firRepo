@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>애니메이션 css 효과</title>
+<!--
+	애니메이션 효과
+	속성명은 @keyframes 입니다.(영화의 촬영 및 상영을 상상하셈)
+	animation-속성명..
+
+	기본 rule
+	1. @keyframes 이름 지정{
+		애니메이션 효과를 정의
+		from(){}
+		to(){}
+	}
+	2. 애니메이션이 적용 될 요소를 정의합니다.
+	div{
+		div 기본 css 속성 정의
+		animation-name : keyframe 이름
+		animation-속성 : 값,
+		animation-속성 : 값,
+		n.....
+	}
+-->
+<style>
+	@keyframes exam1{
+		from{
+			left: 10px;
+		}
+		to{
+			left: 300px;
+		}
+	
+	 /* 지속시간동안의 특정 지점에 효과를 다르게 줄 수 있음 % 로 수행시점을 지정함*/
+	/* 0%{background-color: red; left:0px; top:0px; }
+	 25%{background-color: yellow;left:200px; top:0px;}
+	 50%{background-color: blue; left:200px; top:200px;}
+	 75%{background-color: green; left:0px; top:200px;}
+	 100%{background-color: purple;left:0px; top:0px;}
+	*/
+	}
+	
+	div{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: relative;
+		animation-name: exam1;
+		animation-duration: 4s;
+		animation-timing-function: ease;
+		/*cubic-bezier(0.25, 0.1, 0.25, 1.0);*/
+	}
+
+</style>
+</head>
+<body>
+	<h1>Anima1 Ex..효과가 끝나면 원래로 돌아갑니다</h1>
+	<div>
+		<img src="../images/zzanggu.png" width="90px" height="90px">
+	</div>
+</body>
+</html>

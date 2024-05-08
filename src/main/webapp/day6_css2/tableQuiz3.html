@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Quiz 3</title>
+
+<!--
+	화면 결과 : th를 포함해서 총 11개의 로우와 3개의 컬럼으로 구성된 테이블을 작성하세요.
+	각 컬럼명은 company, ceo, country(값은 아무거나 넣으세요)
+	
+	이렇게 만든 테이블은 컬럼명이 있는 로우만 여러분이 좋아하는 컬러로 배경색을 지정하세요.
+	테이블은 striped table로 구성시키세요. (짝,홀수행만 컬러 주는 것 striped table)
+	컬럼명 컬럼은 padding-top 12, pasdding-bottom 12px 정렬은 left, bgcolor는 내맘대로
+	폰트컬러는 white로 하셈.
+	
+	td는 border 스타일을 주는 1 solid fvcolor.
+	
+	그런데 위 조건이 모두 만족되려면 아래의 테이블 코드로 적용이 되어야 합니다.
+	
+	모든 스타일은 mycustom 이라는 id를 먼저 정의하고, 그 하위에 각 요소가 적용될 수 있도록 스타일을
+	정의해서 테이블에 적용되어야 합니다.
+	
+	hovering 효과도 주기
+-->
+
+<style>
+	 
+	
+	table#mycustom{
+		font-family: Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+	}
+	
+	th{
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: left;
+		background-color: seagreen;
+		color: white;
+		border: 1px solid black;
+	}
+	td{
+		border: 1px solid dimgray;
+	}
+	tr:nth-child(odd) {
+		background-color: lightgray;
+	}
+	
+	tr:hover {
+		background-color: gray;
+		}
+
+
+	
+	
+	
+</style>
+
+</head>
+<body>
+	<h1>Table Quiz 3</h1>
+	
+	<table id="mycustom">
+		<tr>
+			<th>
+				COMPANY
+			</th>
+			<th>
+				CEO
+			</th>
+			<th>
+				COUNTRY
+			</th>
+		</tr>
+		<tr>
+				<td>
+					삼성
+				</td>
+				<td>
+					이재용
+				</td>
+				<td>
+					대한민국
+				</td>
+			</tr>
+			<tr>
+				<td>
+					현대
+				</td>
+				<td>
+					현정은
+				</td>
+				<td>
+					대한민국
+				</td>
+			</tr>
+			<tr>
+				<td>
+					카카오
+				</td>
+				<td>
+					김범수
+				</td>
+				<td>
+					대한민국
+				</td>
+			</tr>
+			<tr>
+				<td>
+					롯데
+				</td>
+				<td>
+					신동빈
+				</td>
+				<td>
+					4
+				</td>
+			</tr>
+			<tr>
+				<td>
+					CJ
+				</td>
+				<td>
+					이재현
+				</td>
+				<td>
+					5
+				</td>
+			</tr>
+			<tr>
+				<td>
+					네이버
+				</td>
+				<td>
+					이해진
+				</td>
+				<td>
+					6
+				</td>
+			</tr>
+			<tr>
+				<td>
+					넷마블
+				</td>
+				<td>
+					방준혁
+				</td>
+				<td>
+					7
+				</td>
+			</tr>
+			<tr>
+				<td>
+					넥슨
+				</td>
+				<td>
+					유정현
+				</td>
+				<td>
+					8
+				</td>
+			</tr>
+			<tr>
+				<td>
+					쿠팡
+				</td>
+				<td>
+					누구야!
+				</td>
+				<td>
+					9
+				</td>
+			</tr>
+			<tr>
+				<td>
+					신세계
+				</td>
+				<td>
+					정용진
+				</td>
+				<td>
+					10
+				</td>
+			</tr>
+		
+		
+		
+	</table>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Html을 어떻게 구성하는지의 중간 결과</title>
+
+<link rel="stylesheet" href="./structure.css"> 
+
+</head>
+<body>
+	<div id="container">
+		<header>
+			<div id="logo">
+				<a href="#">
+					<h1>About Jeju</h1>
+				</a>						
+			</div>
+			<nav>
+				<ul id="topMenu"><!--각 리스트는 li라는 list 요소의 하위 요소로 표현합니다.-->
+					<li><a href="#">단체 여행</a></li>
+					<li><a href="#">맞춤 여행</a></li>
+					<li><a href="#">갤러리</a></li>
+					<li><a href="#">문의하기</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+	    <main class="contents">
+
+				<section id="headling">
+					<h2>몸과 마음을 힐링할 수 있는 섬</h2>
+					<div class="detail">
+						<img src="../images/healing.jpg">
+
+						<b>
+							<p>
+								힐링(Healing)의 공간 제주..
+							</p>
+						</b>
+							<p>
+								탁 트인 바다와, 깨끗한 물색으로, 많은 여행자가 찾는 섬입니다.
+							</p>
+				
+					</div>
+					
+					<div class="schedule">
+						<h3>상세 일정</h3>
+						<ul>
+							<li>여행 기간 : 2박 3일</li>
+							<li>여행 일정 : (상담바랍니다.)</li>
+						</ul>
+					</div>
+				</section>
+				
+	
+				
+				<section id="activity">
+					<h2>다양한 할 거리가 존재하는 섬</h2>
+					<div class="detail">
+						<img src="../images/activity.jpg">
+			
+						<b>
+							<p>
+								모험과 스릴이 넘치는 레져의 천국..제주!!
+							</p>
+						</b>
+						<p>
+							몸으로 직접 부딪히며 모든걸 Activity를 즐겨보세요.
+						</p>
+							<p>
+								메롱
+								메롱
+								메롱 나도 제주 가고싶다...
+							</p>
+				
+					</div>				
+				</section>
+		</main>		    
+	
+	<!--footer 영역(Sementic Tag : 논리태그.. 눈에는 안보이지만, 브라우저가 브라이징시 논리적으로 구분하는 영역태그.
+	    종류로는 header > nav(n개 이상 선언 가능), [main] > [section] > [article] || [aside] || [footer] > 만약 footer를 선언했다면,
+	    하위에는 section, nav등을 선언해서 구조화 가능합니다.--> 
+	    
+	    <footer>
+			<section id="bottomMenu">
+				<ul>
+					<li><a href="#">회사소개</a></li>
+					<li><a href="#">개인정보 처리 방침</a></li>
+					<li><a href="#">여행 약관</a></li>
+					<li><a href="#">사이트맵</a></li>
+				</ul>
+			</section>
+		</footer>
+	</div>
+
+</body>
+</html>

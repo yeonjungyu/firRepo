@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+
+<style>
+ 
+/* font에 스타일 적용하기.
+	대부분의 속성은 우리가 잘 알고 있는 속성입니다. 
+	family, weigt 등 일반적인 건 구글링해서 필요시 사용.
+	지금은 웹 폰트를 사용하는 방법만 알아볼게요. 
+	참고로 font 파일은 ttf라는 확장자를 가지고있고, 이걸 구매 또는 얻어서 내 페이지에 사용할 수 있음 */
+	 
+ @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+/* 
+	특정 서체를 적용하는 방법 (ttf 파일을 내 서버에 가지고 있을 때 사용 법)
+	속성 명 : 
+	@font-face {
+			font-family: '내가 이름을 지정하면 됨'; ex) 나눔명조;
+			src : local('지정한 서체명 대체되는 다음 서체명') ex) 나눔명조 나눔스크립트
+			url('서체가 있는 경로 확장자까지 포함') format('truetype'); 
+			}
+*/
+
+ @font-face {
+	font-family: 'nbs';
+	src: local('nbs'),
+	url('../fonts/NanumBrushScript-Regular.ttf') format('truetype');
+	/*url('../fonts/NanumBrushScript-Regular.ttf') format('truetype');*/
+ }
+
+ .nbsFont {
+	 font-family: 'nbs', serif;
+	 
+ }
+
+
+
+h1{
+	font-size: 30px;
+	color: cadetblue;
+	font-weight: bold;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+/*  
+	글 정렬 하기 속성 text-align : 문장을 box내에서 정렬시 사용하는 속성
+	값은 많지만 대부분 center를 사용함
+*/
+
+.center{
+	 text-align: center;	 
+ }
+.jfy{
+	 text-align: right;
+ }
+/* 
+	text-decoration : 텍스트에 줄을 넣거나 뺴주는 속성
+	a 태그는 기본적으로 텍스트 아래에 라인이 생기는데, 이 속성으로는 없애거나 할 수 있음
+*/
+
+/*
+	그림자(shadow) : 가로-세로-번짐의 정도 - 생각
+*/
+
+.shadow1{
+	text-shadow: 1px 2px 5px greenyellow;
+}
+
+.shadow2{
+	text-shadow: -3px -1px 5px darkmagenta;
+}
+
+
+
+</style>
+	
+
+</head>
+<body>
+<h1>여긴 Nanum Myeongjo 폰트가 적용된 내용입니다.</h1>
+<h2 class="nbsFont">여긴 nbsFonts가 적용된 내용입니다.</h2>
+<h3 class="jfy">여긴 jfy가 적용된 내용입니다.</h3>
+
+<a href="http://www.daum.net" style="text-decoration: underline;">
+	daum</a><br>
+	
+<h1 class="shadow1">이건 shadow1 내용입니다.</h1>
+<h1 class="shadow2">이건 shadow2 내용입니다.</h1>
+
+
+
+
+
+</body>
+</html>

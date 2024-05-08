@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style>
+	div{
+		background-color: green;
+	}
+	div.first{
+		/* 투명도는 영어로 opacity*/
+		opacity: 0.1;
+	}
+	div.second{
+		/* 투명도는 영어로 opacity*/
+		opacity: 0.3;
+	}
+	div.third{
+		/* 투명도는 영어로 opacity*/
+		opacity: 0.6;
+	}
+	
+	
+</style>
+</head>
+<body>
+	
+<!--모든 html elemeny는 컬러를 갖습니다. 이 컬러는 적용되는 부분에 따라서 글자, 배경에 반영됩니다.
+	이 중 컬러의 조합에 대해 알아볼건데, 컬러 조합은 아래처럼 대략 4개정도로 구분됩니다.
+	1. RGB : Red Green Blue 조합(일반적으로 컬러명 사용)
+	2. HEX : #을 이용해서 16진수의 컬러값을 사용하는 것
+	3. HSL : 잘 사용하지 않음.(hue, saturation, lightness 조합)
+	4. 위 모든 조합에 투명도를 적용할 수 있음(0.0(완전투명) ~ 1.0(완전불투명) 까지)
+	투명도 값은 제일 마지막 값으로 사용되어야 합니다.
+	ex) (123,255,123,0.3)  -->
+
+<h1 style="background-color: rgb( 0,0,225,0.1 ); border: 5px solid tomato;">Hello World</h1>
+<p style="background-color: #ffa500; border: 5px dashed limegreen">
+	안녕하세요 저는 유연정입니다.
+	안녕하세요 저는 유연정입니다.
+	안녕하세요 저는 유연정입니다.
+	안녕하세요 저는 유연정입니다.
+	안녕하세요 저는 유연정입니다.
+	안녕하세요 저는 유연정입니다.
+</p>
+
+<h2>투명도 확인하기</h2>
+<div>
+	<p>기본 div의 투명도 1입니다.</p>
+</div>
+
+<div class="first">
+	<p>기본 div의 투명도 0.1입니다.</p>
+</div>
+
+<div class="second">
+	<p>기본 div의 투명도 0.3입니다.</p>
+</div>
+
+<div class="third">
+	<p>기본 div의 투명도 0.6입니다.</p>
+</div>
+
+
+</body>
+</html>

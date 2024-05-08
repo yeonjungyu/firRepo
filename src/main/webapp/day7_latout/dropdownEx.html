@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style>
+	/* 1번 div에 스타일을 적용하세요 : dropdown 이라는 클래스 명으로
+		relation 포지션과, inline-block 속성을 정의하고 1번 div에 클래스를 적용시키세요
+	*/
+	
+	.dropdown{
+		position: relative;
+		display: inline-block;	
+	}
+	
+	.dropdown-content{
+		display: none;
+		position: absolute;
+		background-color: lightgreen;
+		min-width: 160px;
+		box-shadow: 0px 10px 0px rgba(0,0,0,0.2);
+		padding: 12px 16px;
+		/* */
+		z-index: 1;
+	}
+	
+	.dropdown:hover .dropdown-content{
+		display: block;
+	}
+	
+	
+</style>
+</head>
+<body>
+<h2>Hoverble Dropdown</h2>
+<p>아래의 콘텐츠에 호버링해보세요</p>
+
+<div class="dropdown"> 
+	<span>Mouse Over Me!!</span>
+	<div class="dropdown-content">
+		<p>Hello World!!</p>
+	</div>
+	
+</div>
+</body>
+</html>

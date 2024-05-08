@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--HEAD 블락에 정의(define) 가능한 요소 알아보기
+	   meta, title, link, script
+	   meta는 문서 전체의 정보를 기술하는 태그로 속성을 이용해서 제어.
+	   속성으로는 몇 가지가 있는데, 필요한 것만 좀 알아보자.
+	   
+	   title은 문서 제목을 사용. 별거 없음
+	   link는 CSS 의 파일을 가져다 사용할 때 사용되는 요소.
+	   script는 자바스크립트를 사용할 때 스크립트의 시작 및 끝을 선언하는 요소.
+	-->
+<meta charset="UTF-8">
+<!--검색엔진에서 키워드 조회 시 걸리도록 설정함-->
+<meta name="keywords" content="html5, meta정보, css">
+<meta name="이 문서에 대한 설명">
+<!--refresh : 5초 후에 hello.html로 페이지 재요청을 뜻함-->
+<!--<meta http-equiv="refresh" content="5;hello.html">-->
+
+<title>html head 요소 설명</title>
+<!--link 요소를 이용한 외부 css파일 include -->
+<link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <h1>이건 head 요서에 대한 설명 페이지입니다.</h1>
+    
+    <!--img 요소는 single tag로 사용함. 속성 중 src는 이미지의 경로를 포함한 이름을 alt라는 속성은 이미지가 로딩이 안되거나
+    느릴 때 이미지 대신 표시항 문자열을 넣음-->
+ <img alt="이건 이미지1" src="../images/picture1.png">이미지1
+ <img alt="이건 이미지2" src="../images/picture2.png" width="30" height="40">이미지2  
+ 
+ <!--인터넷 이미지 가져와서 표시해보기-->
+ <img alt="이건 이미지3" src="http://192.168.0.10/web_front/images/page_s.jpg" border="2">이미지3
+  
+  
+  <!--https://www.google.com/url?sa=i&url=https%3A%2F%2Fnamu.wiki%2Fw%2F%25EA%25B9%2580%25ED%2583%259C%25EB%25A6%25AC%3Frev%3D1195&psig=AOvVaw3ZTuz5NwBpalEr1FWpNEWM&ust=1703915056986000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCIDRnK_4s4MDFQAAAAAdAAAAABAI-->
+ <img 
+ 	alt="이건 이미지4" 
+ 	src="https://i.namu.wiki/i/Z87hgAZ0NODiZ1lJr2tWiYx6gE1wBipB5wGuseKA_xqdUsqqU3JZ72g-xwhbsSwLdh_QcqHGVvfvr0nQL0hBFg.webp" 
+ 	border="2"
+ 	width="500" height="500">이미지4
+ 	
+ 	<hr>
+ 	<br>
+ 	<!--image 폴더에 보면 p2_s 라는 이미지가 있음. 위에선 src값을 URL 줬지만,
+ 	아래는 내부 경로를 이용해서 이미지 랜더링 시키세요. -->
+	
+	<img alt="이건 이미지5" src="../images/p2_s.png">이미지5
+	
+	</body>
+</html>

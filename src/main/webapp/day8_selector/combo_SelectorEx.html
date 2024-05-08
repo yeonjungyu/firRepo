@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style>
+	/* 
+		인접셀렉터 : CSS에서는 선택자(seletor)를 중복해서 나열 후 속성을 정의할 수 있다.
+	이 중 우리가 알아본거는 ","를 이용한 일괄 정의법 ex:p, h1, h2 {} 3개의 요소를 한번에 정의하는 것을
+	알아봤고, 이번엔 계층을 따라서 적용을 시키는 방법을 알아봅니다.(기호를 사용하는 데 의미만 잘 파악하세요)
+	
+	1. 상하위 계층형 : 상위요소 하위요소(공백을 기준으로 나열) : 이렇게 하면 이 구조로 되어있는 모든 selector는 
+	공통 스타일이 정의됩니다. ex: section div p{} 이렇게 하면 세개의 요소가 {}여기에 공통으로 정의되는 거
+	
+	2. 오직 자식에게만 적용되도록 하는 기호 : > 를 이용하면 특정요소의 바로 자식만 선택되어 스타일을 적용토록합니다.
+	ex. div>p 의 의미는 div 내부에 있는 p에만 적용되도록 한다는 뜻.
+	
+	3. 인접형제요소(sibiling) 셀렉터 : 같은 부모를 두고 있는 자식들간의 선택을 나타냅니다.
+	기호로는 + 를 사용합니다.
+	ex. h1 + p 요소의 형제인 p 요소 중 첫번째 p 요소에만 스타일을 적용하라는 의미.
+	
+	4. 모든 형제 셀렉터 : ~ 를 이용함. 이 경우 모든 형제 셀렉터가 적용됨
+	
+	*/
+	
+	div~p{
+		background-color: lightgreen;
+	}
+	
+</style>
+</head>
+<body>
+
+	<h2> 모든 형제 셀렉터 예제</h2>
+	<div>
+		<p>
+			여긴 p1 내용
+		</p>
+		<p>
+			여긴 p2 내용
+		</p>
+		
+		<section>
+			<p>
+				여긴 section 내에 있는 p1의 내용
+			</p>
+		</section>
+	</div>
+
+	<p>여긴 div 밖의 p1내용</p>
+	
+	<div>
+		<p> 여긴 두번쨰 div 내부의 p입니다.</p>
+	</div>
+	
+	<p>여긴 div 밖의 p2내용</p>
+	
+	<p> 이건 형제 인가...?</p>
+	
+	<div>
+		<p> 얘는 div 내부의 자식이고</p>
+	</div>
+
+
+
+
+
+
+</body>
+</html>

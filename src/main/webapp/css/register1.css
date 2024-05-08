@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* 모든 요소의 마진과 패딩을 0으로 초기화 하세요.*/
+
+*{
+	margin:0;
+	padding:0;
+}
+/* body 요소의 내용을 정의하세요
+	색상, ccc, padding 20px*/
+	
+body{
+	background-color: #ccc;
+	padding: 20px;
+	}
+	
+/*
+signup id 를 아래처럼 정의하세요.
+b-color : fff 
+border 1 solid 222,
+5px 정도로 모서리 둥글게
+패딩 20,  w400 마진 상하30 좌우 자동으로 조정하도록 정의
+*/	
+
+#signup{
+	background-color: #fff;
+	border: 1 solid #222;
+	border-radius: 5px;
+	padding: 20px;
+	width: 400px;
+	margin: 30px auto;
+}
+
+/*
+	signup 하위에 존재하는 fildset legend 는 아래와 같은 스타일리 공통정의 되도록
+	1. 필스셋 : 보더를 그리고, 1 solid ccc 아래마진 30
+	2. 리전드 : 글씨크기 16, 두껍게, 패딩은 좌측으로 5, 아래는 10로 적용
+	3. signup 하위의 li 에 아래처럼 스타일 적용(문제에 함정잇음 잘 파악)
+	 라인높이 30, 불릿없애고 패딩 5,10 아래마진2
+	4. 버튼바꾸기. 셀렉터 잘 정의하고 내용은 아래와 같은
+	 선 : 1솔리드 222; 2픽셀 둥글게 넓게영역 차지하도록 block 속성
+	 글크기 16, 자간(letter-spacing) 1px, 마진 auto, padding 상하 7 좌우 25
+	5. label 정렬
+	 기본적으로 float을 사용하는데 라벨을 기준으로 다른 요소가 우측에 위치하도록해보시고
+	 라벨의 모든 크기는 13px 너비 110px 하세요  
+	6. input 요소의 속성 타입을 이용해서 아래처럼 스타일을 정의하세요
+	 a. text, password, tel, email의 input은 보더1 솔리드 ccc 
+	 모서리는 3px 둥글게, 글크기 13, 패딩 5, 너비200 으로 하고
+	 b. input 요소의 속성명이 required 로 된 애는 border를 1 레드 솔리드로
+	 c. 읽기만 가능한 input 요소는 border를 그리지 마세요.
+	 
+*/
+
+#signup fieldset{
+	border: 1 solid #ccc;
+	margin-bottom: 30;
+}
+
+#signup legend{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 0 10 5;
+}
+#signup ul li{
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+
+#signup button{
+	border: 1 solid #222;
+	border-radius: 2px;
+	display: block;
+	font-size: 16;
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+}
+
+#signup label{
+	float: left;
+	font-size: 13px;
+	width: 110px;
+}
+
+/* #input[type="text password tel email"]{
+		border: 1 solid #ccc;
+		border-radius: 3px;
+		font-size: 13px;
+		padding: 5px;
+		width: 200px;
+	}
+#input[type="required"]{
+	border: 1 red solid;
+}
+#input[type="readonly"]{
+	border: none;
+}*/
+
+#signup	input[type="text"] input[type="password"] input[type="tel"] input[type="email"]{
+	border: 1 solid #ccc;
+	border-radius: 3px;
+	font-size: 13px;
+	padding: 5px;
+	width: 200px;
+}
+
+#signup input[type="text"]:focus{
+	background-color: lightblue;
+}
+
+/* 가상 클래스 (요소로는 존재하지 않지만 특정 기능을 수행하는 클래스 뜻함
+	문법은 모든 요소옆에 ":" 클래스 명을 주고 값을 지정함. (love hate 링크요소의 가상 클래스 접두어 표현)
+	
+*/
+
+
+#signup	input[required]{
+	border: 1 solid red;
+}	
+#signup	input[readonly]{
+	border: none;
+}
+		
+		
+		
+		
+		

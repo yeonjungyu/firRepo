@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--div는 특정 요소들을 묶는데 사용합니다. 이 때 id를 목적에 따라서 다르게 주는데,
+	대부분의 경우 맨 바닥(즉, document 위에 바로위치하는)의 div id를 일반적으로 container라고 칭합니다.
+	이 개념을 학습하는데 목적이 있습니다.
+	(body 영역을 document라고 할 수 있음)
+	-->
+	
+<style>
+	#container{
+		width: 600px;
+		margin: 20px auto; 
+		/* 컨테이너 내부에 들어오는 모든 box 요소 top/bottom 20px 공간을 주고, 좌우는 브라우저가 알아서*/	
+	}
+h1{
+	display: inline-block; 
+	/*박스의 형태가 컨텐츠를 포함 후 나를 포함하는 container의 width를 모두 쓸지(block) 아니면
+	컨텐츠 만큼만 쓸 지 (inline-block)를 결정하는 요소입니다.*/
+	background-color: khaki;
+	color: darkblue;
+	}
+.accent{
+	font-weight: bold;
+	color: blue;
+}	
+		
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="container">
+		<h1>웹프로그래밍의 첫 단계 중 CSS 학습</h1>
+		<p>html, css, javascript, jquery 등을 배우는데,
+			지금 배우는 것은 디자인보다는 다음에 배울
+			<span class="accent" 
+			style="background-color: chartreuse;">
+				자바스크립트</span>에서 정말 중요하게 쓰이기 때문에 배움.
+		</p>
+	</div>
+
+
+
+</body>
+</html>

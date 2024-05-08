@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Form Tag의 개론</h1>
+<div>
+	<h1>회원가입정보</h1>
+	
+	<form method="get" action="reqEx.jsp" name="f1" id="f1">
+		<fieldset>
+			<legend>상품선택</legend>
+			<p><b>주문할 상품을 선택하세요.</b></p>
+			
+			<ul>
+				<li>
+					스타벅스 카페라떼 <input type="checkbox" value="ok" name="sb_latte">
+					<input type="number" min="0" max="10" value="3" name="sb_cafe_cnt" inputmode="numeric">최대 10개
+				</li>
+				
+				<li>
+					스타벅스 아메리카노 <input type="checkbox" value="good" name="sb_ame">
+					<input type="range" min="0" max="5" name="sb_ame_cnt" value="3">최대 5개
+				</li>
+				
+				<li>배송일 지정<input type="date" value="2024-01-04" name="delDate"></li>
+				<!--시간에 대한 input 요소임. time, datetime(년월일시분초), datetime-local(datetime)-->
+				
+					<li>배송시간 지정 <input type="time"></li>
+					<li>배송시간 지정2 <input
+									type="datetime-local"
+									id="meeting-time"
+									name="meeting-time"
+									value="2024-01-12T19:30"
+									min="2024-01-01T00:00"
+									max="2024-02-01T00:00"></li>
+					<li>배송시간 지정3 <input type="datetime-local"></li>
+		
+			</ul>
+
+			
+		</fieldset>
+		
+		
+		
+		<fieldset>
+			<legend>
+				회원정보
+			</legend>
+			
+			<ul id="member">
+				<li>
+					<label for="user_name">이름</label>
+					<input 
+						type="text" 
+						id="user_name" 
+						name="user_name" 
+						autofocus  required disabled>
+				</li>
+				
+				<li>
+					<label for="user_id">ID</label>
+					<input 
+						type="text" 
+						id="user_id" 
+						name="user_id"
+						placeholder="6~20자 숫자,대문자,@,.으로 구성하세요"
+				
+						required>
+				</li>
+				
+				<li>
+					<label for="user_pw">PW</label>
+					<input 
+						type="password" 
+						id="user_pw" 
+						name="user_pw" size="30" 
+						maxlength="24" 
+						placeholder="숫자,영문자,특문몇개로(#$^%*정도만허용) 12~30자"
+					
+						required>
+						<!--검증(하다) : validate or validation-->
+				</li>
+				
+				<li>
+					<label for="user_email">이메일</label>
+					<input type="email" id="user_email" name="user_mail">
+				</li>
+				
+				<li>
+					<label for="user_phone">핸드폰</label>
+					<input type="tell" id="user_phone" name="user_phone">
+				
+				</li>
+				
+				<!--Drop down 버튼(Select 요소)-->
+				<!--Select라는 Root Tag를 이용해서 사용자가 선택할 수 있는 항목을 정의하고
+					그 항복을 선택할 수있도록 만드는 태그. 이 태그는 input요소 타입이 아니라
+					select 라는 요소로 정의해야함. 각 항목은 option이라는 하위요소로 정의해서 나열-->
+				<li>
+					<label for="pet-select">좋아하는 동물 선택하세요</label>
+					<select id="pet-select" name="pet">
+						<option value="">--옵션을 선택해 주세요--</option>
+						<option value="cat">--고양이--</option>
+						<option value="dog">--강아지--</option>
+						<option value="cow">--송아지--</option>
+					</select>
+					</li>	
+					
+					
+					<!--hidden field : 랜더링은 안되지만, 내부적으로 값을 가지고 있는 input요소
+					사용목적은, 사용자가 입력하지 않지만 서버에서 필요한 정보를 내부적으로 가지게 해서 서버에
+					전송하도록 하는데 목적이 있습니다. 중요한건, 랜더링이 안된다는 것ㅇ입니다.-->
+					<input type="hidden" name="isLogin" value="y" id="hid1">
+					
+					
+					<li>
+						<label for="search">검색 필드</label>
+						<input type="search" id="search" name="search" placeholder="검색어입력">
+					</li>
+					
+					
+<!-- http://192.168.0.11/web_front/day4/form1.jsp?sb_latte=ok
+&sb_cafe_cnt=3
+&sb_ame_cnt=5
+&meeting-time=2024-01-12T19%3A30
+&user_id=f%40.34534SDF
+&user_pw=
+&user_mail=d%40aaa
+&user_phone=54323
+&pet=cat
+&isLogin=y (해든타입)	-->
+				
+			</ul>
+		</fieldset>
+			<input type="submit" value="가입"> 
+			<input type="reset" value="재작성">
+			<input type="button" value="가입2" 
+			onclick="document.getElementById('f1').submit();">
+	</form>
+				
+				<!--로그인 한다 하고 가정할 때 로그인 버튼을 생성해서 클릭하도록 해볼게요-->
+				
+	<form action="reqPostEx.jsp" method="post" >
+		
+		<!--파일업로드 input요소 type=file 이라는 애로 선택합니다.
+			multiple 속성은 다중 파일 선택 가능하게 함
+			꼭 기억(외우라는 것이 아닌 파일 업로드시 아래의 설명을 대략적으로 기억)
+			파일을 업로드시엔, 반드시 post method로 form의 전송방식ㅇ르 지정해야하고,
+			encType 이라는 값을 multipart/form.data라는 값으로 지정해야 함. 반드시!-->
+					
+		<li>파일 올리기<input type="file" name=file id="file" multiple></li><br>
+		<input type="image" src="../images/login.png" alt="로그인 이미지">
+		
+		<div style="background-color: cornsilk;">
+			<h3> 수강 후기를 남겨주세요</h3>
+			<textarea placeholder="최대 500자 까지 작성가능" name="review"
+					id="review" cols="60" rows="10"></textarea>
+		</div>
+		
+		<input type="submit">
+	</form>
+	
+	
+	<!--문서내에 다른 영역을 지정해서 콘텐츠를 표현하도록 하는 iframe에 대해서 알아볼게요.-->
+	
+	<div id="iframe_utub">
+		<section>
+			<h2>넷플릭스 티져 영상</h2>
+			<p>Utub에서 가져옴</p>
+			<!--<iframe width="800" height="700" 
+			src="https://naver.me/FvFJtKJ0"
+			framboder="0"
+			allowfullscrean>
+			</iframe>-->
+			
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/bGil7Wxi1nA?si=m6X-CzSPQpgl8nVD" 
+			title="YouTube video player" frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+			allowfullscreen></iframe>
+		</section>
+	</div>
+	
+	
+	<div>
+		<h3>svg 요소 : 지도 등을 표현할 때 사용되는 요소입니다.
+			브라우저에 도화지를 제공한다 라고 생각하셈. 도화지 위에 그림을 그리는데 
+			도구도 제공해줌. 이 도구를 이용해서 지도 등을 그리는 형태의 요소.
+			scalable vector grahpic의 약자입니다.
+			만약 게임 등을 구현할 때는 canvas라는 그래픽 요소를 사용합니다.
+			svg는 지도에서만 사용됨.
+		</h3>
+	</div>
+	
+	
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+	<!--
+	목록(list)에 style 적용하기. 이건 자주 쓰이므로 알아두면 굿
+	ul, ol
+-->
+	<style>
+		/* 1. 기존 리스트의 블릿의 기본 모양 정의하기 */
+
+		ul {
+			background: chocolate;
+			padding: 20px;
+			list-style-image: url('../images/dot.png');
+		}
+
+		ol {
+			background: cornflowerblue;
+			padding: 20px;
+		}
+
+		/* 특정 요소내에는 특정 요소가 반드시 존재해야 하는 중첩같은 요소(ul, ol) 같은 것들은
+요소를 나열해서 스타일을 정의할 수 있다. 단 , 가 아니가 공백을 줘야함*/
+
+		ul li {
+			background: hotpink;
+			color: darkred;
+			padding: 5px;
+			margin-left: 35px;
+
+		}
+
+		ol li {
+			background: black;
+			color: mistyrose;
+			margin: 5px;
+
+		}
+
+
+
+		ul.a {
+			/*list-style-type: circle;*/
+			/* 리스트의 내용을 들여쓸 때에는 position: inside; 를 이용합니다. outside가 디폴트임*/
+			list-style-position: inside;
+		}
+
+		ul.b {
+			list-style-type: square;
+		}
+
+		ol.c {
+			list-style-type: upper-roman;
+		}
+
+		ol.d {
+			list-style-type: lower-greek;
+		}
+
+		/* 2. image 불릿 사용하기 */
+		ul.e {
+			/*list-style-image: url('../images/dot.png');*/
+		}
+
+		/* 퀴즈ㅠㅠ
+	div css를 정의합니다(400,500)
+	라인은 실선으로 하고, 컬러는 내맘대로
+	내부에 사용되는 text는 중앙정렬
+	내부에 사용되는 text는 순서없는 항목으로 mylist 라는 id로 사용할 수 있도록 정의하고
+	각 스타일의 블릿은 square로 사용하도록 하고 들여쓰기가 되도록.
+	
+	조건 모든 스타일은 shothans 기법으로 정의
+*/
+
+
+		div {
+			width: 400px;
+			height: 500px;
+			border: 2px solid crimson;
+			text-align: center;
+			background-color: lavenderblush;
+		}
+
+		ul#mylist {
+			list-style: square outside url('../images/dot.png');
+
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="a">
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ul>
+	<ul class="b">
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ul>
+	<ol class="c">
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ol>
+	<ol class="d">
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ol>
+
+	<ul class="e">
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ul>
+
+
+
+	<div>
+		<p>하이하이</p>
+
+		<ul id="mylist">
+			<li>일번</li>
+			<li>이번</li>
+		</ul>
+
+	</div>
+
+
+	<hr>
+	<ul>
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ul>
+	
+	<ol>
+		<li>coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ol>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

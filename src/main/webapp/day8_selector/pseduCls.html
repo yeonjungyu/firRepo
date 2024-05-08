@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+	가상클래스는 link와 관련된 클래스 위주로 알아봅니다.
+	꼭 기억하세요!
+	html에서 가상 이름이 붙는 애들은 크게 두개로 나뉩니다.
+	하나는 가상클래스, 나머진 가상요소
+	
+	선언하는 방법이 틀린데, 클래스는 Element:classname
+	요소는 Element::attrName
+	
+	가상클래스는 link와 관련된 것과 이벤트와 관련된 것들이 대부분입니다.
+	link와 관련된 건 love hate(link visited hover active) 반드시 이 순으로 정의 해야함.
+	버그없이 적용됩니다.
+	
+-->
+<title>가상클래스 알아보기</title>
+<style>
+	a:link{
+		color: gold;
+	}
+	a:visited{
+		color: crimson;
+	}
+	a:hover{
+		color: aqua;
+	}
+	a:active{
+	color: cornflowerblue;
+	cursor: pointer;
+	}
+	a.hightlight:hover{
+		color: deeppink;
+		font-size: 25px;
+	}
+	/* div를 만드는데ㅡ 기본컬러는 여러분이 좋아하는 걸로, hover시엔 블루로 변경시키도록*/
+	
+	div{
+		background-color: lightblue;
+	}
+	div:hover p.show {
+		display: block;
+	
+	}
+	
+	p.show{
+		display: none;
+		background-color: yellow;
+		padding: 20px;
+	}
+	a.hightlight:hover{
+		color: deeppink;
+		font-size: 25px;
+		}
+	
+	/* 자식 요소 선택 클래스 : 요소를 지정 후에 특정 요소의 순서를 지정합니다.*/
+		p i:first-child {
+			color: blue;
+		}
+		
+	
+	
+	
+	
+</style>
+</head>
+<body>
+
+
+<p>hello...para</p>
+<p>hello...para2</p>
+
+<div>
+	<p>나에게 <i>hover</i> 시에 <i>Hello</i>가 보이도록 만들어 보세요</p>
+	<p>나에게 hover 시에 Hello가 보이도록 만들어 보세요2</p>
+	<p class="show">메롱메롱</p>
+	
+</div>
+
+</body>
+</html>

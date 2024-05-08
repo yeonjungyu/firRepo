@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자바스크립트를 이용한 동적 화면 보이기</title>
+
+<style>
+	#panel, .flip{
+		font-size: 16px;
+		padding: 10px;
+		text-align: center;
+		background-color: cornflowerblue;
+		color: white;
+		border: solid 1px chocolate;
+		margin: auto;
+	}
+	#panel{
+		display: none;
+	}
+</style>
+</head>
+<body>
+<h1>Display 속성과 자바스크립트를 이용한 동적 제어하기</h1>	
+
+<p class="flip" onclick="myfunction();"> Panel 내용을 보려면 click 해주세요.</p>
+
+<div id="panel">
+	<p>여기 내용은 위 p태그의 요소를 클릭해야만 보임</p>	
+	<p>이게 나오는 원리는 위 p 태그에 이벤트 속성(on click)을 걸고
+		클릭이 되면 이를 수행하는 자바스크립트 함수를 정의 및 호출해서
+		이 panel의 display 속성값을 none--> block 으로 변경하는 거임.
+	</p>
+</div>
+<script>
+	function myfunction(){
+		//alret('myfunction이 호출되었네요..'); 
+		document.getElementById("panel").style.display='block';
+	} 
+	
+	
+	
+</script>
+</body>
+</html>

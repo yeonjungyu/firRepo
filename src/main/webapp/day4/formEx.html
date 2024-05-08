@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Form Tag의 개론1</h1>
+<div>
+	<p>form tag의 기본 속성 알아보기</p>
+	<ul>
+		<li>form tag에는 데이터 서버에 전솔할 때 전송 방식을 결정할 수 있다.</li>
+		<li>이 전송 방식을 method 라는 속성으로 정의하는데, 기본값은 get(데이터 길이제한 있음 @4,100 bytes)이다.</li>
+		<li>method는 약 7개로 값이 정의 되어 있는데, get, post, put, delete, trace,...</li>
+		<li>get은 일반적으로 데이터 조회(select)를 서버에 요청 시에 사용됨</li>
+		<li>post는 데이터 생성(insert), 갱신(update), 삭제(delete)를 서버에 요청시에 사용됨</li>
+		<li>나머지 것들은 RESTfull Service를 강의할 때 알게됩니다.</li>
+		<li>name 속성 : 폼의 이름을 지정합니다. 자바스크립트나 DOM 등을 이용해서 form 데이터를 제어할 때 사용됨</li>
+		<li>action : 전솔될 서버의 URL을 명기함. 이때 대부분의 서버페이지는 서버프로그래밍이 적용된 페이지</li>
+		<li>enctype : 폼 데이터의 encoding 타입을 명기함. 나중에파일 업로드시에 보기됨</li>
+		<li>target : 폼 데이터가 처리된 이후에 결과를 출력할 프레임이나 창을 지정할 수 있다. anchor의 target과 같음</li>	
+	</ul>
+</div>
+
+<div>
+	<form method="get" action="form1.jsp" target="_blank" autocomplete="off">
+		
+		<label for="name">id를 입력하세요</label>
+		ID : <input type="text" id="name" name="id" size="15"><br>
+		
+		<label for="password">pw를 입력하세요</label>
+		PassWord : <input type="password" id="password" name="pw" size="30"><br>
+		
+		<!--체크박스(다중선택 기능)와 라디오 버튼(싱글선택만 가능)을 알아볼게요
+		fieldset tag : 아래의 legend 그룹을 실제 그룹화 하는 tag.  fieldset > legend > check or radio
+		legend tag 위 태그들을 그룹화 시키는 태그입니다.
+		legend는 그룹의 대표명을 넣고 나머지 label을 이용하거나 없이 checkbox를 구성하는 방식
+		-->
+		<fieldset>
+			<legend>취미선택하세요</legend>
+			<input type="checkbox" name="hobby" value="nap" id="h1"> 
+			<label for="h1">낮잠</label>
+			<input type="checkbox" name="hobby" value="movie" id="h2">
+			<label for="h2">영화보기</label>
+		</fieldset>
+		
+	
+		
+		
+		<br><br><br>
+		
+		<fieldset>
+			<legend>가장 좋아하는 과목 하나 선택하세요</legend>
+			<input type="radio" name="subject" value="java" id="h1"> 
+			<label for="h1">Java</label>
+			<input type="radio" name="subject" value="script" id="h2">
+			<label for="h2">JavaScript</label>
+			<input type="radio" name="subject" value="react" id="h3">
+			<label for="h3">React</label>
+		</fieldset>
+		
+		<!--query string : get method 를 이용해서 서버에 전송 시 서버 페이지명 이후에 ? 다음에 나오는
+		    데이터형싱을 뜻함-->
+s
+		
+		
+		<input type="submit" value="전송"><input type="reset" value="초기화">
+	</form>
+</div>
+
+</body>
+</html>
